@@ -81,7 +81,7 @@ function changeFirm(numberFirm) {
     // const title = card.querySelector(".card-title");
     // const text = card.querySelector(".card-text");
     // // Actualiza la imagen, título y texto con los datos del objeto
-    image.src = friendList[numberFirm].avatar;
+    image.src = `assets/images/profile/${numberFirm}.png`;
     // title.textContent = friendList[numberFirm].nombre;
     // text.textContent = friendList[numberFirm].dedicatoria;
 }

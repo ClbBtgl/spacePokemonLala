@@ -84,11 +84,15 @@ function changeFirm(numberFirm) {
     // // Actualiza la imagen, título y texto con los datos del objeto
     if (numberFirm != currentId) {
         image.classList.remove('fade-in')
+        title.classList.remove('fade-in')
+        text.classList.remove('fade-in')
         setTimeout(() => {
             image.src = `assets/images/profile/${numberFirm}.png`;
             title.textContent = friendList[numberFirm].nombre;
             text.textContent = friendList[numberFirm].dedicatoria;
             image.classList.add('fade-in')
+            title.classList.add('fade-in')
+            text.classList.add('fade-in')
         }, 500);
 
     }

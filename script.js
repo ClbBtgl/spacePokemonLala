@@ -73,3 +73,15 @@ function showContent(menuId) {
         currentMenu = menu;
     }
 }
+
+
+function changeFirm(numberFirm) {
+    const card = document.querySelector(".text-main");
+    const image = card.querySelector(".img-on-top");
+    // const title = card.querySelector(".card-title");
+    // const text = card.querySelector(".card-text");
+    // // Actualiza la imagen, título y texto con los datos del objeto
+    image.src = friendList[numberFirm].avatar;
+    // title.textContent = friendList[numberFirm].nombre;
+    // text.textContent = friendList[numberFirm].dedicatoria;
+}

@@ -57,13 +57,9 @@
             <div class="tabs" id="tab3">
                 <div class="card-friends">
                     <div class="text-main">
-                        <img src="https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png" alt="">
-                        <p>Student | Coder</p>
-                        <p>
-                            pinche celeste que me hace colocar estas cosas vergonzosas,pero quiero que sepas que eres muy importante para mi, a pesar de todas las cosas que han pasado en este tiempo, se lo fuerte que puedes llegar a ser y también tu lado mas amable... y si se de
-                            alguien a quien siempre la voy a supportear en todo sentido será a ti n.n te tendré siempre presente en mi corazón y que perdure esta amistad para siempre, por que es la cosa mas linda que me pasó, desde que te conozco bien
-                            eres una de las personas mas maravillosas que ha caído en mi vida. tkm ❤
-                        </p>
+                        <img src="https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png" alt="" class="img-on-top">
+                        <p id="name"></p>
+                        <p id="dedicatoria"></p>
                     </div>
                 </div>
                 <div class="friends-list">
@@ -75,7 +71,7 @@
 
                                 <div class="minimuse">
                                     <div class="textcon">
-                                        <a href="#muse-2"><img src="assets/images/avatars/touka.gif"></a>
+                                        <a onclick="changeFirm(0)"><img src="assets/images/avatars/touka.gif"></a>
                                         <div class="text">Touka</div>
                                     </div>
                                 </div>
@@ -415,6 +411,7 @@
         margin-top: 0px;
         display: inline-block;
         margin-right: 10px;
+        cursor: pointer;
     }
     
     .minimuse img {

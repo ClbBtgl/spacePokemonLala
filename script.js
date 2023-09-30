@@ -79,8 +79,8 @@ function showContent(menuId) {
 function changeFirm(numberFirm) {
     const card = document.querySelector(".text-main");
     const image = card.querySelector(".img-on-top");
-    // const title = card.querySelector(".card-title");
-    // const text = card.querySelector(".card-text");
+    const title = card.querySelector(".name");
+    const text = card.querySelector(".dedicatoria");
     // // Actualiza la imagen, título y texto con los datos del objeto
     if (numberFirm != currentId) {
         image.classList.add('fade-in')
@@ -88,8 +88,9 @@ function changeFirm(numberFirm) {
         setTimeout(() => {
             image.classList.remove('fade-in')
         }, 500);
+        title.textContent = friendList[numberFirm].nombre;
+        text.textContent = friendList[numberFirm].dedicatoria;
     }
     currentId = numberFirm
-    title.textContent = friendList[numberFirm].nombre;
-    text.textContent = friendList[numberFirm].dedicatoria;
+
 }

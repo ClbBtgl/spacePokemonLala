@@ -83,15 +83,16 @@ function changeFirm(numberFirm) {
     const text = card.querySelector(".dedicatoria");
     // // Actualiza la imagen, título y texto con los datos del objeto
     if (numberFirm != currentId) {
-        image.classList.add('fade-in')
-        image.src = `assets/images/profile/${numberFirm}.png`;
-        title.textContent = friendList[numberFirm].nombre;
-        text.textContent = friendList[numberFirm].dedicatoria;
+        image.classList.remove('fade-in')
         setTimeout(() => {
-            image.classList.remove('fade-in')
+            image.src = `assets/images/profile/${numberFirm}.png`;
+            title.textContent = friendList[numberFirm].nombre;
+            text.textContent = friendList[numberFirm].dedicatoria;
+            image.classList.add('fade-in')
         }, 500);
 
     }
     currentId = numberFirm
+
 
 }

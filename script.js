@@ -46,8 +46,7 @@ function openMenu(idTab) {
             cardBody.style.backgroundColor = 'grey'
             break;
         case 'tab3':
-            cardBody.style.backgroundImage = 'none'
-            cardBody.style.backgroundColor = 'grey'
+            cardBody.style.backgroundImage = "url('assets/images/bgtab.jpg')"
             break;
     }
     showContent(idTab)

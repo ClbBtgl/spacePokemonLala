@@ -85,11 +85,12 @@ function changeFirm(numberFirm) {
     if (numberFirm != currentId) {
         image.classList.add('fade-in')
         image.src = `assets/images/profile/${numberFirm}.png`;
+        title.textContent = friendList[numberFirm].nombre;
+        text.textContent = friendList[numberFirm].dedicatoria;
         setTimeout(() => {
             image.classList.remove('fade-in')
         }, 500);
-        title.textContent = friendList[numberFirm].nombre;
-        text.textContent = friendList[numberFirm].dedicatoria;
+
     }
     currentId = numberFirm
 

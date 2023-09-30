@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const options = ['profile', 'links', 'friendSignature'];
 
 let currentMenu = null;
+let currentId = null
 
 function toggleMenu(idButton, idMenu) {
     const pokeballs = document.getElementsByClassName('pokeball');
@@ -81,7 +82,14 @@ function changeFirm(numberFirm) {
     // const title = card.querySelector(".card-title");
     // const text = card.querySelector(".card-text");
     // // Actualiza la imagen, título y texto con los datos del objeto
-    image.src = `assets/images/profile/${numberFirm}.png`;
-    // title.textContent = friendList[numberFirm].nombre;
-    // text.textContent = friendList[numberFirm].dedicatoria;
+    if (numberFirm != currentId) {
+        image.classList.add('fade-in')
+        image.src = `assets/images/profile/${numberFirm}.png`;
+        setTimeout(() => {
+            image.classList.remove('fade-in')
+        }, 500);
+    }
+    currentId = numberFirm
+    title.textContent = friendList[numberFirm].nombre;
+    text.textContent = friendList[numberFirm].dedicatoria;
 }

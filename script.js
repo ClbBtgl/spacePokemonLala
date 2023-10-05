@@ -1,8 +1,9 @@
 let friendList = []
 
 document.addEventListener("DOMContentLoaded", function() {
-    console.log('hola soy una pagina activandose');
+    openMenu('tab0')
     getFriends()
+
 });
 
 
@@ -54,21 +55,25 @@ function openMenu(idTab) {
 
 function showContent(menuId) {
     const menu = document.getElementById(menuId);
+    const mainMenu = document.getElementById('tab0')
     const cardBody = document.getElementById('card-body-change')
 
     if (menu === currentMenu) {
         // Si el mismo menú está abierto, ciérralo
         cardBody.style.backgroundImage = 'url(assets/images/bg.png)'
         menu.classList.remove("show");
+        mainMenu.classList.add("show")
 
         currentMenu = null;
     } else {
         // Cierra el menú actual si está abierto
         if (currentMenu) {
+            mainMenu.classList.remove("show")
             currentMenu.classList.remove("show");
 
         }
         // Abre el menú seleccionado
+        mainMenu.classList.remove("show")
         menu.classList.add("show");
         currentMenu = menu;
     }
